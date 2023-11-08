@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        var mycol;
+        var mysiz;
+        function myFun1(x) {
+            mycol = x.style.backgroundColor;
+            mysiz = x.style.fontSize;
+            x.style.backgroundColor = "yellow";
+            x.style.fontSize = "x-large"
+        }
+
+        function myFun3(x) {
+            mycol = x.style.backgroundColor;
+            x.style.backgroundColor = "#4a88b7";
+        }
+
+        function myFun2(x) {
+           
+            x.style.backgroundColor = mycol;
+            x.style.fontSize = mysiz;
+        }
+    </script>
+
+
+<style> <!-- -->
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+td, th {
+  border: 1px solid #4a04b7;
+  text-align: left;
+  padding: 20px;
+}
+
+tr:nth-child(even) {
+  background-color: #b04ea1;
+}
+</style>
+</head>
+<body>
+
+<h2>HTML Table</h2>
+
+<table>
+  <tr onmouseover="myFun1(this)" onmouseout="myFun2(this)">
+    <th>Company</th>
+    <th>Contact</th>
+    <th>Country</th>
+  </tr>
+  <tr onmouseover="myFun1(this)" onmouseout="myFun2(this)">
+    <td onmouseover="myFun3(this)" onmouseout="myFun2(this)">Alfreds Futterkiste</td>
+    <td onmouseover="myFun3(this)" onmouseout="myFun2(this)">Maria Anders</td>
+    <td onmouseover="myFun3(this)" onmouseout="myFun2(this)">Germany</td>
+  </tr>
+  <tr onmouseover="myFun1(this)" onmouseout="myFun2(this)">
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+  </tr>
+  <tr onmouseover="myFun1(this)" onmouseout="myFun2(this)">
+    <td>Ernst Handel</td>
+    <td>Roland Mendel</td>
+    <td>Austria</td>
+  </tr>
+  <tr onmouseover="myFun1(this)" onmouseout="myFun2(this)">
+    <td>Island Trading</td>
+    <td>Helen Bennett</td>
+    <td>UK</td>
+  </tr>
+  <tr onmouseover="myFun1(this)" onmouseout="myFun2(this)">
+    <td>Laughing Bacchus Winecellars</td>
+    <td>Yoshi Tannamuri</td>
+    <td>Canada</td>
+  </tr>
+  <tr onmouseover="myFun1(this)" onmouseout="myFun2(this)">
+    <td>Magazzini Alimentari Riuniti</td>
+    <td>Giovanni Rovelli</td>
+    <td>Italy</td>
+  </tr>
+</table>
+
+</body>
+</html>
